@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 @RestController()
 public class PixController {
 
-    private final List<String> VALID_SEARCH_FIELDS = Arrays.asList("type", "firstName", "lastName", "account");
+    private final List<String> VALID_SEARCH_FIELDS = Arrays.asList("firstName", "lastName", "account");
 
     @Autowired
     private PixService pixService;

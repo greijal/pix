@@ -19,13 +19,17 @@ import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyMap;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -310,7 +314,7 @@ class PixControllerTest {
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().is(200))
                 .andExpect(content().
-                        json("    {\"id\":1,\"value\":null,\"type\":\"ALEATORIO\",\"accountType\":\"CORRENTE\",\"agency\":null,\"account\":null,\"firstName\":null,\"lastName\":null,\"createDate\":null,\"disabledDate\":null}\n\"}"));
+                                json("    {\"id\":1,\"value\":null,\"type\":\"ALEATORIO\",\"accountType\":\"CORRENTE\",\"agency\":null,\"account\":null,\"firstName\":null,\"lastName\":null,\"createDate\":null,\"disabledDate\":null}\n\"}"));
     }
 
     @Test
@@ -325,6 +329,30 @@ class PixControllerTest {
                 .andExpect(status().is(404));
     }
 
+    @Test
+    @DisplayName("Get- Get PIX by query param")
+    public void getPixQueryParamTest() throws Exception {
+
+        var pix = new Pix();
+        pix.setId(1l);
+        pix.setAccountType(AccountType.CORRENTE);
+        pix.setType(PixType.ALEATORIO);
+
+        var param = new HashMap<String,String>();
+        param.put("firstName","a");
+
+        var pageRequest = PageRequest.of(0,10);
+
+        when(service.findAll(param,pageRequest)).thenReturn(List.of(pix));
+
+        mockMvc.perform(get("/pix")
+                        .param("page","0")
+                        .param("size","10")
+                        .param("firstName","a")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(200));
+    }
     @Test
     @DisplayName("POST- Get PIX using DTO")
     public void getPixPostTest() throws Exception {
