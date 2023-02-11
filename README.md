@@ -3,6 +3,31 @@
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/greijal/pix)
 ![GitHub top language](https://img.shields.io/github/languages/top/greijal/pix)
 
+## Prerequisites
+
+* Have a JDK 11 installed
+* Have Gradlew installed and available on your PATH or IDE
+* Have Docker/Docker compose installed
+
+## Run
+ 1 - Start docker-compose 
+ 
+```bash
+docker compose up
+```
+2 -  Start Project
+```bash
+ ./gradlew bootRun
+ ```
+
+### Postmen 
+ You can import the Postmen collection and use it to help to make those requests. 
+ 
+ File:
+ ```bash
+ PIX.postman_collection.json
+```
+ 
 
 ## Request
 ### Create PIX 
@@ -55,4 +80,19 @@ Content-Length: 117
 }
 ```
 
+### Update 
 
+```http
+PUT /pix/1 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+Content-Length: 130
+
+{
+    "accountType": "corrente",
+    "account": "00000001",
+    "agency": "1111",
+    "firstName": "Algusto",
+    "lastName": ""
+}
+``` 
