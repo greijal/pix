@@ -7,7 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51ce3c11-7d3d-42dd-9074-e9ae0960c32e" name="Changes" comment="Add more controller tesst">
+    <list default="true" id="51ce3c11-7d3d-42dd-9074-e9ae0960c32e" name="Changes" comment="Clean project">
+      <change afterPath="$PROJECT_DIR$/PIX.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itau/pix/controller/PixController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itau/pix/controller/PixController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/itau/pix/controller/PixControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/itau/pix/controller/PixControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,30 +49,6 @@
                 <item name="pix" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="pix" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="pix" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="pix" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="pix" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -78,6 +65,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -127,6 +115,27 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.pix [clean]">
+    <configuration name="pix [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="pix [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -169,38 +178,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PixControllerTest.getPixGetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="pix.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itau.pix.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.itau.pix.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.itau.pix.controller.PixControllerTest" />
-      <option name="METHOD_NAME" value="getPixGetTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PixControllerTest.getPixPostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="pix.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itau.pix.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.itau.pix.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.itau.pix.controller.PixControllerTest" />
-      <option name="METHOD_NAME" value="getPixPostTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PixControllerTest.getPixQueryParamNotFoundTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="pix.test" />
       <extension name="coverage">
@@ -237,13 +214,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.pix [clean]" />
+        <item itemvalue="Gradle.pix [bootRun]" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Gradle.pix [test]" />
         <item itemvalue="JUnit.PixControllerTest.getPixQueryParamNotFoundTest" />
-        <item itemvalue="JUnit.PixControllerTest.getPixGetTest" />
-        <item itemvalue="JUnit.PixControllerTest.getPixPostTest" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +247,7 @@
       <workItem from="1676129816362" duration="87000" />
       <workItem from="1676129925410" duration="145000" />
       <workItem from="1676130072671" duration="151000" />
-      <workItem from="1676130226248" duration="7544000" />
+      <workItem from="1676130226248" duration="12024000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Git Action">
       <created>1676130366575</created>
@@ -323,7 +312,35 @@
       <option name="project" value="LOCAL" />
       <updated>1676137399431</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add more controller tesst">
+      <created>1676137961168</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676137961168</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Clean">
+      <created>1676138021935</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676138021935</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add gitignore">
+      <created>1676138072368</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676138072368</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Clean project">
+      <created>1676142157514</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1676142157514</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,6 +374,11 @@
             </State>
           </value>
         </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
       </map>
     </option>
     <option name="OPEN_GENERIC_TABS">
@@ -373,7 +395,10 @@
     <MESSAGE value="Clem project" />
     <MESSAGE value="Create controller test" />
     <MESSAGE value="Add more controller tesst" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add more controller tesst" />
+    <MESSAGE value="Clean" />
+    <MESSAGE value="Add gitignore" />
+    <MESSAGE value="Clean project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

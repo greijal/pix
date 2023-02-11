@@ -53,7 +53,7 @@ public class PixController {
         return ResponseEntity.ok(new SearchResponseDTO.Builder().of(pix.get()));
     }
 
-    @GetMapping("/pix")
+    @GetMapping("/pix/search")
     private ResponseEntity search(@RequestParam Map<String, String> allParam,
                                   @RequestParam(name = "page", defaultValue = "0") int page,
                                   @RequestParam(name = "size", defaultValue = "10") int size) {

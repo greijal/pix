@@ -1,0 +1,158 @@
+{
+  "info": {
+    "_postman_id": "caaeb7c8-3b56-420e-a660-ca5512c50e23",
+    "name": "PIX",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "25799878"
+  },
+  "item": [
+    {
+      "name": "Create",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"cpf\",\n    \"value\": \"11844456378\",\n    \"accountType\": \"corrente\",\n    \"account\": \"00000001\",\n    \"agency\": \"1111\",\n    \"firstName\": \"Algusto\",\n    \"lastName\": \"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/pix",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pix"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get by id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/pix/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pix",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/pix/search?firstName=Algusto&account=00000001&agency=1111&page=0&size=10",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pix",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "firstName",
+              "value": "Algusto"
+            },
+            {
+              "key": "lastName",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "account",
+              "value": "00000001"
+            },
+            {
+              "key": "agency",
+              "value": "1111"
+            },
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"account\": \"00000001\",\n\t\"agency\": \"1111\",\n\t\"firstName\": \"Algusto\",\n\t\"lastName\": \"\",\n    \"page\":0,\n    \"size\":10\n\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/pix/search",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pix",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"accountType\": \"corrente\",\n    \"account\": \"00000001\",\n    \"agency\": \"1111\",\n    \"firstName\": \"Algusto\",\n    \"lastName\": \"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/pix/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pix",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
