@@ -126,7 +126,7 @@
       <recent name="com.itau.pix.dto.response" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.pix [test]">
+  <component name="RunManager" selected="Gradle.pix [clean]">
     <configuration name="pix [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -239,9 +239,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.pix [clean]" />
         <item itemvalue="Gradle.pix [test]" />
         <item itemvalue="JUnit.PixControllerTest.getPixQueryParamNotFoundTest" />
-        <item itemvalue="Gradle.pix [clean]" />
         <item itemvalue="JUnit.PixControllerTest.getPixGetTest" />
         <item itemvalue="JUnit.PixControllerTest.getPixPostTest" />
       </list>
