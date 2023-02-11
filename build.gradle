@@ -8,7 +8,9 @@ plugins {
 
 group = 'com.itau.pix'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '18'
+sourceCompatibility = 18
+targetCompatibility = 18
+
 
 repositories {
     mavenCentral()
@@ -52,3 +54,12 @@ test {
 jacocoTestReport {
     dependsOn test // tests are required to run before generating the report
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
+
+check.dependsOn jacocoTestReport
