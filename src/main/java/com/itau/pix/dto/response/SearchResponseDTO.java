@@ -1,5 +1,6 @@
 package com.itau.pix.dto.response;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.itau.pix.data.Pix;
@@ -10,33 +11,26 @@ import java.util.Date;
 
 public class SearchResponseDTO implements Serializable {
 
-    @JsonSetter(nulls = Nulls.AS_EMPTY)
     private Long id;
-    @JsonSetter(nulls = Nulls.AS_EMPTY)
+    private String value;
     private String type;
-    @JsonSetter(nulls = Nulls.AS_EMPTY)
     private String accountType;
-    @JsonSetter(nulls = Nulls.AS_EMPTY)
     private String agency;
-    @JsonSetter(nulls = Nulls.AS_EMPTY)
     private String account;
-    @JsonSetter(nulls = Nulls.AS_EMPTY)
     private String firstName;
-    @JsonSetter(nulls = Nulls.AS_EMPTY)
     private String lastName;
-    @JsonSetter(nulls = Nulls.AS_EMPTY)
     private Date createDate;
-    @JsonSetter(nulls = Nulls.AS_EMPTY)
     private Date disabledDate;
 
     public SearchResponseDTO() {
     }
 
-    public SearchResponseDTO(Long id, String type, String accountType,
+    public SearchResponseDTO(Long id,String value, String type, String accountType,
                              String agency, String account,
                              String firstName, String lastName,
                              Date createDate, Date disabledDate) {
         this.id = id;
+        this.value=value;
         this.type = type;
         this.accountType = accountType;
         this.agency = agency;
@@ -45,6 +39,14 @@ public class SearchResponseDTO implements Serializable {
         this.lastName = lastName;
         this.createDate = createDate;
         this.disabledDate = disabledDate;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public Long getId() {
@@ -121,6 +123,8 @@ public class SearchResponseDTO implements Serializable {
 
     public static class Billder {
         private Long id;
+        private String value;
+
         private String type;
         private String accountType;
         private String agency;
@@ -134,6 +138,7 @@ public class SearchResponseDTO implements Serializable {
         public SearchResponseDTO of(Pix pix) {
             return id(pix.getId())
                     .type(pix.getType().getValue())
+                    .value(pix.getValue())
                     .accountType(pix.getAccountType().getValue())
                     .agency(pix.getAgency())
                     .account(pix.getAccount())
@@ -145,13 +150,18 @@ public class SearchResponseDTO implements Serializable {
         }
 
         public SearchResponseDTO billd() {
-            return new SearchResponseDTO(id, type, accountType, agency,
+            return new SearchResponseDTO(id,value, type, accountType, agency,
                     account, firstName, lastName, createDate, disabledDate);
         }
 
 
         public Billder id(Long id) {
             this.id = id;
+            return this;
+        }
+
+        public Billder value(String value) {
+            this.value = value;
             return this;
         }
 
