@@ -353,6 +353,26 @@ class PixControllerTest {
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().is(200));
     }
+
+    @Test
+    @DisplayName("Get- Get PIX by query param not found")
+    public void getPixQueryParamNotFoundTest() throws Exception {
+
+        var param = new HashMap<String,String>();
+        param.put("firstName","a");
+
+        var pageRequest = PageRequest.of(0,10);
+
+        when(service.findAll(param,pageRequest)).thenReturn(Lists.newArrayList());
+
+        mockMvc.perform(get("/pix")
+                        .param("page","0")
+                        .param("size","10")
+                        .param("firstName","a")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(404));
+    }
     @Test
     @DisplayName("POST- Get PIX using DTO")
     public void getPixPostTest() throws Exception {

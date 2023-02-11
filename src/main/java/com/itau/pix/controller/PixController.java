@@ -39,7 +39,7 @@ public class PixController {
     }
 
     @PutMapping("/pix/{id}")
-    private ResponseEntity create(@PathVariable Long id, @Valid @RequestBody UpdateRequestDTO request) {
+    private ResponseEntity update(@PathVariable Long id, @Valid @RequestBody UpdateRequestDTO request) {
         var pix = pixService.update(id, request);
         return ResponseEntity.ok(new UpdateResponseDTO.Builder().of(pix));
     }

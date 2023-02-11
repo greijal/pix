@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.itau.pix.controller.PixControllerTest" tests="76" skipped="0" failures="0" errors="0" timestamp="2023-02-11T17:49:59" hostname="MacBook-Pro-de-Leandro.local" time="0.522">
+  <properties/>
+  <testcase name="[1] cpf=" classname="com.itau.pix.controller.PixControllerTest" time="0.187"/>
+  <testcase name="[2] cpf= " classname="com.itau.pix.controller.PixControllerTest" time="0.004"/>
+  <testcase name="[3] cpf=abc" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[4] cpf=1234" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[5] cpf=13#45" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[6] cpf=123.424.235-34" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="POST- create duplicated pix" classname="com.itau.pix.controller.PixControllerTest" time="0.01"/>
+  <testcase name="[1] accountType=" classname="com.itau.pix.controller.PixControllerTest" time="0.009"/>
+  <testcase name="[2] accountType= " classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[3] accountType=233" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[4] accountType=accountType2" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="POST- Get PIX using DTO not found" classname="com.itau.pix.controller.PixControllerTest" time="0.013"/>
+  <testcase name="POST- Get PIX using DTO" classname="com.itau.pix.controller.PixControllerTest" time="0.006"/>
+  <testcase name="[1] account=" classname="com.itau.pix.controller.PixControllerTest" time="0.008"/>
+  <testcase name="[2] account= " classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[3] account=233" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[4] account=account" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[5] account=123456789" classname="com.itau.pix.controller.PixControllerTest" time="0.004"/>
+  <testcase name="Get- Get PIX by query param not found" classname="com.itau.pix.controller.PixControllerTest" time="0.005"/>
+  <testcase name="[1] email=" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[2] email= " classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[3] email=abc" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[4] email=asdad@" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[5] email=as.com" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[6] email=@.com" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[1] agency=" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[2] agency= " classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[3] agency=233" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[4] agency=agency" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[5] agency=123456789" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="PUT- update duplicated pix" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[1] name=" classname="com.itau.pix.controller.PixControllerTest" time="0.004"/>
+  <testcase name="[2] name= " classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[3] name=as" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[1] agency=" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[2] agency= " classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[3] agency=233" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[4] agency=agency" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[5] agency=123456789" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="GET- get Pix by id" classname="com.itau.pix.controller.PixControllerTest" time="0.004"/>
+  <testcase name="[1] accountType=" classname="com.itau.pix.controller.PixControllerTest" time="0.005"/>
+  <testcase name="[2] accountType= " classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[3] accountType=233" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[4] accountType=accountType2" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[1] type=cpf, value=11353529459" classname="com.itau.pix.controller.PixControllerTest" time="0.007"/>
+  <testcase name="[2] type=cnpj, value=57814145000143" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[3] type=celular, value=+5521999999999" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[4] type=email, value=testeemail@gmail.com" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[5] type=aleatorio, value=387865432156787654567890987654676890" classname="com.itau.pix.controller.PixControllerTest" time="0.004"/>
+  <testcase name="[1] name=" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[2] name= " classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[3] name=as" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[1] type=" classname="com.itau.pix.controller.PixControllerTest" time="0.004"/>
+  <testcase name="[2] type= " classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[3] type=1111" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[4] type=type1" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[1] random=" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[2] random= " classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[3] random=abc" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[4] random=#&amp;$(#)#)#=@" classname="com.itau.pix.controller.PixControllerTest" time="0.006"/>
+  <testcase name="[5] random=" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[6] random=&amp;%jdZ4G3tSMCsDnYWFoFfBiAF6njFGxU4iSd" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[1] cellPhone=" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[2] cellPhone= " classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[3] cellPhone=abc" classname="com.itau.pix.controller.PixControllerTest" time="0.005"/>
+  <testcase name="[4] cellPhone=1234" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[5] cellPhone=13#45" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[6] cellPhone=523333322323" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="Get- Get PIX by query param" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="GET- get Pix by id and not found" classname="com.itau.pix.controller.PixControllerTest" time="0.001"/>
+  <testcase name="[1] cnpj=" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[2] cnpj= " classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[3] cnpj=abc" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[4] cnpj=1dssdf" classname="com.itau.pix.controller.PixControllerTest" time="0.003"/>
+  <testcase name="[5] cnpj=13#45" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <testcase name="[6] cnpj=342.424.234" classname="com.itau.pix.controller.PixControllerTest" time="0.002"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.2)
+
+2023-02-11T14:49:58.086-03:00  INFO 32393 --- [    Test worker] c.i.p.c.PixControllerTest                : Starting PixControllerTest using Java 18.0.2.1 with PID 32393 (started by leandrogreijal in /Users/leandrogreijal/IdeaProjects/pix)
+2023-02-11T14:49:58.092-03:00  INFO 32393 --- [    Test worker] c.i.p.c.PixControllerTest                : No active profile set, falling back to 1 default profile: "default"
+2023-02-11T14:49:59.109-03:00  INFO 32393 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-02-11T14:49:59.110-03:00  INFO 32393 --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2023-02-11T14:49:59.112-03:00  INFO 32393 --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 1 ms
+2023-02-11T14:49:59.125-03:00  INFO 32393 --- [    Test worker] c.i.p.c.PixControllerTest                : Started PixControllerTest in 1.297 seconds (process running for 2.257)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

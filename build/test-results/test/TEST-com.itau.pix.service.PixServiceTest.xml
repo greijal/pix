@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.itau.pix.service.PixServiceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-02-11T17:49:59" hostname="MacBook-Pro-de-Leandro.local" time="0.084">
+  <properties/>
+  <testcase name="Create new pix record" classname="com.itau.pix.service.PixServiceTest" time="0.04"/>
+  <testcase name="Update pix record" classname="com.itau.pix.service.PixServiceTest" time="0.002"/>
+  <testcase name="Find pix record using param" classname="com.itau.pix.service.PixServiceTest" time="0.035"/>
+  <testcase name="Find pix record using requestDTO" classname="com.itau.pix.service.PixServiceTest" time="0.001"/>
+  <testcase name="Find pix record using empty requestDTO" classname="com.itau.pix.service.PixServiceTest" time="0.0"/>
+  <testcase name="Create new pix record" classname="com.itau.pix.service.PixServiceTest" time="0.003"/>
+  <testcase name="Update pix record not exist" classname="com.itau.pix.service.PixServiceTest" time="0.0"/>
+  <system-out><![CDATA[2023-02-11T14:49:59.700-03:00  INFO 32393 --- [    Test worker] c.i.p.s.PixService                       : Creating new pix record
+2023-02-11T14:49:59.703-03:00  INFO 32393 --- [    Test worker] c.i.p.s.PixService                       : Updating  pix record ID:1
+2023-02-11T14:49:59.742-03:00  INFO 32393 --- [    Test worker] c.i.p.s.PixService                       : Creating new pix record
+2023-02-11T14:49:59.746-03:00  INFO 32393 --- [    Test worker] c.i.p.s.PixService                       : Updating  pix record ID:1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
