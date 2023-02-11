@@ -18,6 +18,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
 
+import java.util.HashMap;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -109,11 +110,22 @@ class PixServiceTest {
     void findAllByRequestDTOEmptyTest() {
         var request =  new SearchRequestDTO.Builder()
                 .build();
+        when(pixRepository.findAll(any(Specification.class),any(PageRequest.class)))
+                .thenReturn(Mockito.mock(Page.class));
+        var result =  pixService.findAll(request);
+        assertNotNull(result);
+    }
 
+    @Test
+    @DisplayName("Find pix record using param")
+    void findAllTest() {
+        var request = new HashMap<String,String>();
+        request.put("a","a");
+        var pageRequest = PageRequest.of(0,10);
         when(pixRepository.findAll(any(Specification.class),any(PageRequest.class)))
                 .thenReturn(Mockito.mock(Page.class));
 
-        var result =  pixService.findAll(request);
+        var result =  pixService.findAll(request,pageRequest);
         assertNotNull(result);
     }
 }

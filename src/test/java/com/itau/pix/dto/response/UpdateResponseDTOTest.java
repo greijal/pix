@@ -10,7 +10,7 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SearchResponseDTOTest {
+class UpdateResponseDTOTest {
 
     @Test
     @DisplayName("Create response DTO from PIX data")
@@ -27,9 +27,9 @@ class SearchResponseDTOTest {
         pix.setDisabledDate(new Date());
         pix.setCreateDate(new Date());
 
-       var result = new SearchResponseDTO.Builder().of(pix);
+        var result = new UpdateResponseDTO.Builder().of(pix);
 
-       assertEquals(pix.getId(),result.getId());
+        assertEquals(pix.getId(),result.getId());
         assertEquals(pix.getValue(),result.getValue());
         assertEquals(pix.getType().getValue(),result.getType());
         assertEquals(pix.getAccountType().getValue(),result.getAccountType());
@@ -38,7 +38,6 @@ class SearchResponseDTOTest {
         assertEquals(pix.getFirstName(),result.getFirstName());
         assertEquals(pix.getLastName(),result.getLastName());
         assertEquals(pix.getCreateDate(),result.getCreateDate());
-        assertEquals(pix.getDisabledDate(),result.getDisabledDate());
 
 
 

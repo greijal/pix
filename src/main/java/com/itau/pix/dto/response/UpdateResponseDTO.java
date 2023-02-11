@@ -16,6 +16,42 @@ public class UpdateResponseDTO {
     private final String lastName;
     private final Date createDate;
 
+    public Long getId() {
+        return id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public String getAccount() {
+        return account;
+    }
+
+    public String getAgency() {
+        return agency;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
     public UpdateResponseDTO(Long id, String type, String value, String accountType,
                              String account, String agency, String firstName, String lastName, Date createDate) {
         this.id = id;
@@ -29,7 +65,9 @@ public class UpdateResponseDTO {
         this.createDate = createDate;
     }
 
-    public static class Billder {
+
+
+    public static class Builder {
         private Long id;
 
         private String type;
@@ -42,11 +80,12 @@ public class UpdateResponseDTO {
         private Date createDate;
 
 
-        public UpdateResponseDTO billd() {
-            return new UpdateResponseDTO(id, type, value, accountType, account, agency, firstName, lastName, createDate);
+        public UpdateResponseDTO build() {
+            return new UpdateResponseDTO(id, type, value, accountType,
+                    account, agency, firstName, lastName, createDate);
         }
 
-        public UpdateResponseDTO billd(Pix pix) {
+        public UpdateResponseDTO of(Pix pix) {
             this.id = pix.getId();
             this.type = pix.getType().getValue();
             this.value = pix.getValue();
@@ -56,50 +95,50 @@ public class UpdateResponseDTO {
             this.firstName = pix.getFirstName();
             this.lastName = pix.getLastName();
             this.createDate = pix.getCreateDate();
-            return this.billd();
+            return this.build();
         }
 
-        public UpdateResponseDTO.Billder id(Long id) {
+        public Builder id(Long id) {
             this.id = id;
             return this;
         }
 
-        public UpdateResponseDTO.Billder type(String type) {
+        public Builder type(String type) {
             this.type = type;
             return this;
         }
 
-        public UpdateResponseDTO.Billder value(String value) {
+        public Builder value(String value) {
             this.value = value;
             return this;
         }
 
-        public UpdateResponseDTO.Billder accountType(String accountType) {
+        public Builder accountType(String accountType) {
             this.accountType = accountType;
             return this;
         }
 
-        public UpdateResponseDTO.Billder account(String account) {
+        public Builder account(String account) {
             this.account = account;
             return this;
         }
 
-        public UpdateResponseDTO.Billder agency(String agency) {
+        public Builder agency(String agency) {
             this.agency = agency;
             return this;
         }
 
-        public UpdateResponseDTO.Billder firstName(String firstName) {
+        public Builder firstName(String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public UpdateResponseDTO.Billder lastName(String lastName) {
+        public Builder lastName(String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public UpdateResponseDTO.Billder createDate(Date createDate) {
+        public Builder createDate(Date createDate) {
             this.createDate = createDate;
             return this;
         }

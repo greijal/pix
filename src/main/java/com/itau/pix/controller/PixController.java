@@ -41,7 +41,7 @@ public class PixController {
     @PutMapping("/pix/{id}")
     private ResponseEntity create(@PathVariable Long id, @Valid @RequestBody UpdateRequestDTO request) {
         var pix = pixService.update(id, request);
-        return ResponseEntity.ok(new UpdateResponseDTO.Billder().billd(pix));
+        return ResponseEntity.ok(new UpdateResponseDTO.Builder().of(pix));
     }
 
     @GetMapping("/pix/{id}")
@@ -50,7 +50,7 @@ public class PixController {
         if (pix.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
-        return ResponseEntity.ok(new SearchResponseDTO.Billder().of(pix.get()));
+        return ResponseEntity.ok(new SearchResponseDTO.Builder().of(pix.get()));
     }
 
     @GetMapping("/pix")
@@ -74,7 +74,7 @@ public class PixController {
         }
 
         var responseList = pixList.stream()
-                .map(e -> new SearchResponseDTO.Billder().of(e)).collect(Collectors.toList());
+                .map(e -> new SearchResponseDTO.Builder().of(e)).collect(Collectors.toList());
         return ResponseEntity.ok(responseList);
     }
 
@@ -86,7 +86,7 @@ public class PixController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
         var responseList = pixList.stream()
-                .map(e -> new SearchResponseDTO.Billder().of(e)).collect(Collectors.toList());
+                .map(e -> new SearchResponseDTO.Builder().of(e)).collect(Collectors.toList());
         return ResponseEntity.ok(responseList);
     }
 

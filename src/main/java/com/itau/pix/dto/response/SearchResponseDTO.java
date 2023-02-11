@@ -1,8 +1,5 @@
 package com.itau.pix.dto.response;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.annotation.Nulls;
 import com.itau.pix.data.Pix;
 
 import java.io.Serializable;
@@ -11,19 +8,18 @@ import java.util.Date;
 
 public class SearchResponseDTO implements Serializable {
 
-    private Long id;
-    private String value;
-    private String type;
-    private String accountType;
-    private String agency;
-    private String account;
-    private String firstName;
-    private String lastName;
-    private Date createDate;
-    private Date disabledDate;
+    private final Long id;
+    private final String value;
+    private final String type;
+    private final String accountType;
+    private final  String agency;
+    private final String account;
+    private final String firstName;
+    private final String lastName;
+    private final Date createDate;
+    private final Date disabledDate;
 
-    public SearchResponseDTO() {
-    }
+
 
     public SearchResponseDTO(Long id,String value, String type, String accountType,
                              String agency, String account,
@@ -41,87 +37,47 @@ public class SearchResponseDTO implements Serializable {
         this.disabledDate = disabledDate;
     }
 
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public String getValue() {
+        return value;
     }
 
     public String getType() {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public String getAccountType() {
         return accountType;
-    }
-
-    public void setAccountType(String accountType) {
-        this.accountType = accountType;
     }
 
     public String getAgency() {
         return agency;
     }
 
-    public void setAgency(String agency) {
-        this.agency = agency;
-    }
-
     public String getAccount() {
         return account;
-    }
-
-    public void setAccount(String account) {
-        this.account = account;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
-
     public Date getDisabledDate() {
         return disabledDate;
     }
 
-    public void setDisabledDate(Date disabledDate) {
-        this.disabledDate = disabledDate;
-    }
-
-    public static class Billder {
+    public static class Builder {
         private Long id;
         private String value;
 
@@ -146,61 +102,61 @@ public class SearchResponseDTO implements Serializable {
                     .lastName(pix.getLastName())
                     .createDate(pix.getCreateDate())
                     .disabledDate(pix.getDisabledDate())
-                    .billd();
+                    .build();
         }
 
-        public SearchResponseDTO billd() {
+        public SearchResponseDTO build() {
             return new SearchResponseDTO(id,value, type, accountType, agency,
                     account, firstName, lastName, createDate, disabledDate);
         }
 
 
-        public Billder id(Long id) {
+        public Builder id(Long id) {
             this.id = id;
             return this;
         }
 
-        public Billder value(String value) {
+        public Builder value(String value) {
             this.value = value;
             return this;
         }
 
-        public Billder type(String type) {
+        public Builder type(String type) {
             this.type = type;
             return this;
         }
 
-        public Billder accountType(String accountType) {
+        public Builder accountType(String accountType) {
             this.accountType = accountType;
             return this;
         }
 
-        public Billder agency(String agency) {
+        public Builder agency(String agency) {
             this.agency = agency;
             return this;
         }
 
-        public Billder account(String account) {
+        public Builder account(String account) {
             this.account = account;
             return this;
         }
 
-        public Billder firstName(String firstName) {
+        public Builder firstName(String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Billder lastName(String lastName) {
+        public Builder lastName(String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public Billder createDate(Date createDate) {
+        public Builder createDate(Date createDate) {
             this.createDate = createDate;
             return this;
         }
 
-        public Billder disabledDate(Date disabledDate) {
+        public Builder disabledDate(Date disabledDate) {
             this.disabledDate = disabledDate;
             return this;
         }
