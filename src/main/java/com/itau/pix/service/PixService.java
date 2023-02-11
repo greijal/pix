@@ -1,7 +1,7 @@
 package com.itau.pix.service;
 
-import com.itau.pix.data.enums.AccountType;
 import com.itau.pix.data.Pix;
+import com.itau.pix.data.enums.AccountType;
 import com.itau.pix.dto.request.CreateRequestDTO;
 import com.itau.pix.dto.request.SearchRequestDTO;
 import com.itau.pix.dto.request.UpdateRequestDTO;

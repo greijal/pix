@@ -8,13 +8,13 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SearchResponseDTOTest {
 
     @Test
     @DisplayName("Create response DTO from PIX data")
-    void ofTest(){
+    void ofTest() {
         var pix = new Pix();
         pix.setId(10L);
         pix.setType(PixType.ALEATORIO);
@@ -27,20 +27,18 @@ class SearchResponseDTOTest {
         pix.setDisabledDate(new Date());
         pix.setCreateDate(new Date());
 
-       var result = new SearchResponseDTO.Builder().of(pix);
+        var result = new SearchResponseDTO.Builder().of(pix);
 
-       assertEquals(pix.getId(),result.getId());
-        assertEquals(pix.getValue(),result.getValue());
-        assertEquals(pix.getType().getValue(),result.getType());
-        assertEquals(pix.getAccountType().getValue(),result.getAccountType());
-        assertEquals(pix.getAgency(),result.getAgency());
-        assertEquals(pix.getAccount(),result.getAccount());
-        assertEquals(pix.getFirstName(),result.getFirstName());
-        assertEquals(pix.getLastName(),result.getLastName());
-        assertEquals(pix.getCreateDate(),result.getCreateDate());
-        assertEquals(pix.getDisabledDate(),result.getDisabledDate());
-
-
+        assertEquals(pix.getId(), result.getId());
+        assertEquals(pix.getValue(), result.getValue());
+        assertEquals(pix.getType().getValue(), result.getType());
+        assertEquals(pix.getAccountType().getValue(), result.getAccountType());
+        assertEquals(pix.getAgency(), result.getAgency());
+        assertEquals(pix.getAccount(), result.getAccount());
+        assertEquals(pix.getFirstName(), result.getFirstName());
+        assertEquals(pix.getLastName(), result.getLastName());
+        assertEquals(pix.getCreateDate(), result.getCreateDate());
+        assertEquals(pix.getDisabledDate(), result.getDisabledDate());
 
     }
 

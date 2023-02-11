@@ -21,6 +21,7 @@ public @interface ConditionalRegexValidation {
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
+
     String regex();
 
     String conditionalProperty();

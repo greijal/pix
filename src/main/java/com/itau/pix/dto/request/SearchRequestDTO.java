@@ -1,7 +1,5 @@
 package com.itau.pix.dto.request;
 
-import java.util.Objects;
-
 public class SearchRequestDTO {
     private String agency;
     private String account;
@@ -19,19 +17,6 @@ public class SearchRequestDTO {
         this.lastName = lastName;
         this.page = page;
         this.size = size;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        SearchRequestDTO that = (SearchRequestDTO) o;
-        return page == that.page && size == that.size && Objects.equals(agency, that.agency) && Objects.equals(account, that.account) && Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(agency, account, firstName, lastName, page, size);
     }
 
     public String getAgency() {
@@ -91,9 +76,9 @@ public class SearchRequestDTO {
         private int page = 0;
         private int size = 10;
 
-        public SearchRequestDTO build(){
-            return new SearchRequestDTO(this.agency,this.account,
-                    this.firstName,this.lastName, this.page, this.size);
+        public SearchRequestDTO build() {
+            return new SearchRequestDTO(this.agency, this.account,
+                    this.firstName, this.lastName, this.page, this.size);
         }
 
         public Builder agency(String agency) {

@@ -12,21 +12,19 @@ public class SearchResponseDTO implements Serializable {
     private final String value;
     private final String type;
     private final String accountType;
-    private final  String agency;
+    private final String agency;
     private final String account;
     private final String firstName;
     private final String lastName;
     private final Date createDate;
     private final Date disabledDate;
 
-
-
-    public SearchResponseDTO(Long id,String value, String type, String accountType,
+    public SearchResponseDTO(Long id, String value, String type, String accountType,
                              String agency, String account,
                              String firstName, String lastName,
                              Date createDate, Date disabledDate) {
         this.id = id;
-        this.value=value;
+        this.value = value;
         this.type = type;
         this.accountType = accountType;
         this.agency = agency;
@@ -106,7 +104,7 @@ public class SearchResponseDTO implements Serializable {
         }
 
         public SearchResponseDTO build() {
-            return new SearchResponseDTO(id,value, type, accountType, agency,
+            return new SearchResponseDTO(id, value, type, accountType, agency,
                     account, firstName, lastName, createDate, disabledDate);
         }
 

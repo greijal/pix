@@ -8,8 +8,4 @@ public class PixAlreadyExistsException extends RuntimeException {
         this.value = value;
     }
 
-    public String getValue() {
-        return value;
-    }
-
 }

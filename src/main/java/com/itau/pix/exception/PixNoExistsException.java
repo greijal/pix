@@ -8,8 +8,4 @@ public class PixNoExistsException extends RuntimeException {
         this.id = id;
     }
 
-    public Long getValue() {
-        return id;
-    }
-
 }

@@ -89,43 +89,43 @@ class PixServiceTest {
     @Test
     @DisplayName("Find pix record using requestDTO")
     void findAllByRequestDTOTest() {
-       var request =  new SearchRequestDTO.Builder()
+        var request = new SearchRequestDTO.Builder()
                 .account("00000")
-               .agency("0000")
-               .firstName("name")
-               .lastName("last")
-               .page(0)
-               .size(10)
-               .build();
+                .agency("0000")
+                .firstName("name")
+                .lastName("last")
+                .page(0)
+                .size(10)
+                .build();
 
-       when(pixRepository.findAll(any(Specification.class),any(PageRequest.class)))
-               .thenReturn(Mockito.mock(Page.class));
+        when(pixRepository.findAll(any(Specification.class), any(PageRequest.class)))
+                .thenReturn(Mockito.mock(Page.class));
 
-       var result =  pixService.findAll(request);
-       assertNotNull(result);
+        var result = pixService.findAll(request);
+        assertNotNull(result);
     }
 
     @Test
     @DisplayName("Find pix record using empty requestDTO")
     void findAllByRequestDTOEmptyTest() {
-        var request =  new SearchRequestDTO.Builder()
+        var request = new SearchRequestDTO.Builder()
                 .build();
-        when(pixRepository.findAll(any(Specification.class),any(PageRequest.class)))
+        when(pixRepository.findAll(any(Specification.class), any(PageRequest.class)))
                 .thenReturn(Mockito.mock(Page.class));
-        var result =  pixService.findAll(request);
+        var result = pixService.findAll(request);
         assertNotNull(result);
     }
 
     @Test
     @DisplayName("Find pix record using param")
     void findAllTest() {
-        var request = new HashMap<String,String>();
-        request.put("a","a");
-        var pageRequest = PageRequest.of(0,10);
-        when(pixRepository.findAll(any(Specification.class),any(PageRequest.class)))
+        var request = new HashMap<String, String>();
+        request.put("a", "a");
+        var pageRequest = PageRequest.of(0, 10);
+        when(pixRepository.findAll(any(Specification.class), any(PageRequest.class)))
                 .thenReturn(Mockito.mock(Page.class));
 
-        var result =  pixService.findAll(request,pageRequest);
+        var result = pixService.findAll(request, pageRequest);
         assertNotNull(result);
     }
 }

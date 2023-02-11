@@ -66,7 +66,6 @@ public class UpdateResponseDTO {
     }
 
 
-
     public static class Builder {
         private Long id;
 
