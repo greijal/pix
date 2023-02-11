@@ -1,4 +1,17 @@
-# Itau - PIX Case
+<div align="center">
+<a href="https://www.emojione.com/emoji/1f410">
+  <img
+    height="80"
+    width="80"
+    alt="goat"
+    src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Banco_Ita%C3%BA_logo.svg"
+  />
+</a>
+<h1>Itau - PIX Case</h1>
+</div>
+
+
+
 [![codecov](https://codecov.io/gh/greijal/pix/branch/master/graph/badge.svg?token=J9ABG5PDA1)](https://codecov.io/gh/greijal/pix) 
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/greijal/pix)
 ![GitHub top language](https://img.shields.io/github/languages/top/greijal/pix)
@@ -8,6 +21,18 @@
 * Have a JDK 11 installed
 * Have Gradlew installed and available on your PATH or IDE
 * Have Docker/Docker compose installed
+
+
+## Technology Stack
+
+- ``Java 11``
+- ``Spring Boot 3.0.2``
+- ``Junit 5.8.2``
+- ``Mockito 4.3.1``
+- ``Gradlew``
+- ``Jacoco``
+- ``Docket``
+- ``InteliJ IDEA``
 
 ## Run
  1 - Start docker-compose 
