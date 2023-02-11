@@ -2,11 +2,15 @@ package com.itau.pix.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.itau.pix.data.Pix;
+import com.itau.pix.data.enums.AccountType;
+import com.itau.pix.data.enums.PixType;
 import com.itau.pix.dto.request.CreateRequestDTO;
+import com.itau.pix.dto.request.SearchRequestDTO;
 import com.itau.pix.dto.request.UpdateRequestDTO;
 import com.itau.pix.exception.PixAlreadyExistsException;
 import com.itau.pix.exception.PixNoExistsException;
 import com.itau.pix.service.PixService;
+import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -18,9 +22,12 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.List;
+import java.util.Optional;
+
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -288,6 +295,69 @@ class PixControllerTest {
                 .andExpect(status().is(422));
     }
 
+    @Test
+    @DisplayName("GET- get Pix by id")
+    public void getPixByidTest() throws Exception {
+        var pix = new Pix();
+        pix.setId(1l);
+        pix.setAccountType(AccountType.CORRENTE);
+        pix.setType(PixType.ALEATORIO);
+
+        when(service.findById(1l)).thenReturn(Optional.of(pix));
+
+        mockMvc.perform(get("/pix/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(200))
+                .andExpect(content().
+                        json("    {\"id\":1,\"value\":null,\"type\":\"ALEATORIO\",\"accountType\":\"CORRENTE\",\"agency\":null,\"account\":null,\"firstName\":null,\"lastName\":null,\"createDate\":null,\"disabledDate\":null}\n\"}"));
+    }
+
+    @Test
+    @DisplayName("GET- get Pix by id and not found")
+    public void getPixByidNotFound() throws Exception {
+
+        when(service.findById(1l)).thenReturn(Optional.empty());
+
+        mockMvc.perform(get("/pix/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(404));
+    }
+
+    @Test
+    @DisplayName("POST- Get PIX using DTO")
+    public void getPixPostTest() throws Exception {
+
+        var pix = new Pix();
+        pix.setId(1l);
+        pix.setAccountType(AccountType.CORRENTE);
+        pix.setType(PixType.ALEATORIO);
+
+        SearchRequestDTO request = new SearchRequestDTO.Builder().agency("0000").build();
+        when(service.findAll(request)).thenReturn(List.of(pix));
+
+
+        mockMvc.perform(post("/pix/search")
+                        .content(objectMapper.writeValueAsString(request))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(200));
+    }
+
+    @Test
+    @DisplayName("POST- Get PIX using DTO not found")
+    public void getPixPostNotFoundTest() throws Exception {
+
+        SearchRequestDTO request = new SearchRequestDTO.Builder().agency("0000").build();
+        when(service.findAll(any(SearchRequestDTO.class))).thenReturn(Lists.newArrayList());
+
+        mockMvc.perform(post("/pix/search")
+                        .content(objectMapper.writeValueAsString(request))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(404));
+    }
 
     private static UpdateRequestDTO updateRequestDTO() {
         var bilder = new UpdateRequestDTO.Billder();

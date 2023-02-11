@@ -87,6 +87,7 @@ public class PixController {
         }
         var responseList = pixList.stream()
                 .map(e -> new SearchResponseDTO.Builder().of(e)).collect(Collectors.toList());
+
         return ResponseEntity.ok(responseList);
     }
 
