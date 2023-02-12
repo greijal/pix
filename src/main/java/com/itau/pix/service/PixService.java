@@ -8,7 +8,6 @@ import com.itau.pix.dto.request.UpdateRequestDTO;
 import com.itau.pix.exception.PixAlreadyExistsException;
 import com.itau.pix.exception.PixNoExistsException;
 import com.itau.pix.repository.PixRepository;
-import jakarta.persistence.criteria.Predicate;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +15,12 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.criteria.Predicate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class PixService {
@@ -79,7 +80,7 @@ public class PixService {
             return criteriaBuilder.and(predicateList.toArray(new Predicate[0]));
         };
         PageRequest pagination = PageRequest.of(request.getPage(), request.getSize());
-        return pixRepository.findAll(specification, pagination).stream().toList();
+        return (List<Pix>) pixRepository.findAll(specification, pagination).stream().collect(Collectors.toList());
     }
 
     public List<Pix> findAll(Map<String, String> fields, PageRequest pagination) {
@@ -91,7 +92,7 @@ public class PixService {
             return criteriaBuilder.and(predicateList.toArray(new Predicate[0]));
         };
 
-        return pixRepository.findAll(specification, pagination).stream().toList();
+        return (List<Pix>) pixRepository.findAll(specification, pagination).stream().collect(Collectors.toList());
     }
 
 

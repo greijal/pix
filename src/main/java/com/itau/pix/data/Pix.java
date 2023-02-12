@@ -3,10 +3,10 @@ package com.itau.pix.data;
 import com.itau.pix.data.enums.AccountType;
 import com.itau.pix.data.enums.PixType;
 import com.itau.pix.dto.request.CreateRequestDTO;
-import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;

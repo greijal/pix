@@ -26,7 +26,7 @@
 ## Technology Stack
 
 - ``Java 11``
-- ``Spring Boot 3.0.2``
+- ``Spring Boot 2.7.8``
 - ``Junit 5.8.2``
 - ``Mockito 4.3.1``
 - ``Gradlew``
