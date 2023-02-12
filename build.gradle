@@ -49,7 +49,6 @@ configurations {
     }
 }
 
-
 jacocoTestReport {
     reports {
         xml.enabled true
