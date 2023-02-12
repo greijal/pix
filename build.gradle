@@ -8,8 +8,7 @@ plugins {
 
 group = 'com.itau.pix'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 18
-targetCompatibility = 18
+
 
 
 repositories {
