@@ -54,3 +54,11 @@ jacocoTestReport {
         xml.enabled true
     }
 }
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "greijal_pix"
+        property "sonar.organization", "greijal"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
