@@ -56,18 +56,9 @@ jacocoTestReport {
     dependsOn test // tests are required to run before generating the report
 }
 
+
 jacocoTestReport {
     reports {
         xml.enabled true
-        html.enabled false
     }
 }
-
-sonarqube {
-    properties {
-        property "sonar.projectKey", "greijal_pix"
-        property "sonar.organization", "greijal"
-        property "sonar.host.url", "https://sonarcloud.io"
-    }
-}
-check.dependsOn jacocoTestReport
