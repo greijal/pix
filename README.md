@@ -25,7 +25,7 @@
 
 ## Technology Stack
 
-- ``Java 18``
+- ``Java 11``
 - ``Spring Boot 3.0.2``
 - ``Junit 5.8.2``
 - ``Mockito 4.3.1``
